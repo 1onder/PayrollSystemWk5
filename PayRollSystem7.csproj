@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{B81C6EBC-DA42-49CF-91CD-1DDAEDF9ECDC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>PayRollSystem7</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="App_Code\dsPersonnel.xsc">
+      <DependentUpon>dsPersonnel.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\dsPersonnel.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPersonnel1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Code\dsPersonnel.xss">
+      <DependentUpon>dsPersonnel.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\dsUserActivity.xsc">
+      <DependentUpon>dsUserActivity.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\dsUserActivity.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsUserActivity1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Code\dsUserActivity.xss">
+      <DependentUpon>dsUserActivity.xsd</DependentUpon>
+    </None>
+    <None Include="PayrollSystem_DB.ldb" />
+    <None Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="frmEditPersonnel.aspx" />
+    <Content Include="frmMain.aspx" />
+    <Content Include="frmPersonnel.aspx" />
+    <Content Include="frmPersonnelVerified.aspx" />
+    <Content Include="frmSalaryCalculator.aspx" />
+    <Content Include="frmSearchPersonnel.aspx" />
+    <Content Include="frmUserActivity.aspx" />
+    <Content Include="frmViewPersonnel.aspx" />
+    <Content Include="Images\activity_img.jpg" />
+    <Content Include="Images\calculator_img.jpg" />
+    <Content Include="Images\CoolBiz_Productions_logo.JPG" />
+    <Content Include="Images\edit_img.jpg" />
+    <Content Include="Images\employees_img.jpg" />
+    <Content Include="Images\personnel_img.jpg" />
+    <Content Include="Images\search_img.jpg" />
+    <Content Include="PayrollSystem_DB.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\clsDataLayer.cs" />
+    <Compile Include="App_Code\dsPersonnel.Designer.cs" />
+    <Compile Include="App_Code\dsPersonnel1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPersonnel.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\dsUserActivity.Designer.cs" />
+    <Compile Include="App_Code\dsUserActivity1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsUserActivity.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditPersonnel.aspx.cs">
+      <DependentUpon>frmEditPersonnel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.aspx.cs">
+      <DependentUpon>frmMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonnel.aspx.cs">
+      <DependentUpon>frmPersonnel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonnelVerified.aspx.cs">
+      <DependentUpon>frmPersonnelVerified.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalaryCalculator.aspx.cs">
+      <DependentUpon>frmSalaryCalculator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchPersonnel.aspx.cs">
+      <DependentUpon>frmSearchPersonnel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUserActivity.aspx.cs">
+      <DependentUpon>frmUserActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewPersonnel.aspx.cs">
+      <DependentUpon>frmViewPersonnel.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\" />
+    <Folder Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>

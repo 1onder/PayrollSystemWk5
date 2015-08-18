@@ -1,0 +1,2 @@
+C:\Users\Joshua\Downloads\PayrollSystemWk5\obj\x86\Debug\PayrollSystem.csprojResolveAssemblyReference.cache
+C:\Users\Joshua\Downloads\PayrollSystemWk5\bin\Debug\ConsoleApplication.exe.config
